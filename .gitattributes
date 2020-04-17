@@ -1,0 +1,36 @@
+###############################################################################
+# Different environmental filter for configuration files.
+#DEV Password Replacement
+Web.config filter=DEVSqlPasswordDataSourceReplacement
+App.config filter=DEVSqlPasswordDataSourceReplacement
+#Web.Local.config filter=QASqlPasswordDataSourceReplacement
+#Web.Release.config filter=QASqlPasswordDataSourceReplacement
+#Web.Debug.config filter=QASqlPasswordDataSourceReplacement
+#QA Password Replacement
+Web.Acceptance.config filter=QASqlPasswordDataSourceReplacement
+Web.QA.config filter=QASqlPasswordDataSourceReplacement
+Web.PI9.config filter=QASqlPasswordDataSourceReplacement
+#UAT Password Replacement
+Web.UAT.config filter=UATSqlPasswordDataSourceReplacement
+App.uat.config filter=UATSqlPasswordDataSourceReplacement
+#PL Password Replacement
+Web.PL.config filter=PLSqlPasswordDataSourceReplacement
+App.PL.config filter=PLSqlPasswordDataSourceReplacement
+# Production Password Replacement
+Web.Production.config filter=PRODSqlPasswordDataSourceReplacement
+App.production.config filter=PRODSqlPasswordDataSourceReplacement
+# DR Password Replacement
+Web.dr.config filter=DRSqlPasswordDataSourceReplacement
+Web.drtest.config filter=DRSqlPasswordDataSourceReplacement
+App.dr.config filter=DRSqlPasswordDataSourceReplacement
+#Environments
+Local.xml filter=DEVSqlPasswordDataSourceReplacement
+PI9.xml filter=QASqlPasswordDataSourceReplacement
+PL.xml filter=PLSqlPasswordDataSourceReplacement
+Production.xml filter=PRODSqlPasswordDataSourceReplacement
+QA.xml filter=QASqlPasswordDataSourceReplacement
+UAT.xml filter=UATSqlPasswordDataSourceReplacement
+#Build Password Replacements
+Osprey_deploy_admin_tool.bat filter=BuildPasswordsReplacement
+tasks.codesigning.xml filter=BuildPasswordsReplacement
+*.exe filter=lfs diff=lfs merge=lfs -text

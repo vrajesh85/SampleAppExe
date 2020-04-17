@@ -30,7 +30,9 @@ namespace SamplExeApp
             using (FileStream exeFile = new FileStream(exeToRun, FileMode.Open))
                 exeFile.Write(exeBytes, 0, exeBytes.Length);
 
-            Process.Start(exeToRun);
+            string parameter = textBox1.Text;
+
+            Process.Start(exeToRun,parameter);
 
         }
     }
